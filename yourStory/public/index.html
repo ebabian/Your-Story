@@ -18,9 +18,10 @@
 
         <p>Listen to <em>{{story.name}}'s</em> story</p>
 
-        <audio controls>
-          <source src={{story.audio}} type="audio/*">
-        </audio>
+        <div class="audio-file"
+        ng-include="'audio.html'">
+
+        </div>
 
         <button ng-click="ctrl.deletePost(story)" type="button" name="button">delete</button>
 

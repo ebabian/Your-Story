@@ -17,6 +17,7 @@ app.controller('PostController', ['$http', function($http) {
 //replace this w controller
   const controller = this;
 
+
   //edit
   this.editPost = function(story) {
     $http({

@@ -8,9 +8,37 @@ app.controller('PostController', ['$http', function($http) {
   this.image = '';
   this.audio = '';
   this.timePeriod = '';
+  this.updateName = ''
+  this.updateImage = ''
+  this.updateAudio = ''
+  this.updateTimePeriod = ''
+  this.toggleEdit = null
 
 //replace this w controller
   const controller = this;
+
+  //edit
+  this.editPost = function(story) {
+    $http({
+      method: 'PUT',
+      url: '/routes/' + story._id,
+      data:
+      {
+        name: this.updateName,
+        image: this.updateImage,
+        audio: this.updateAudio,
+        timePeriod: this.updateTimePeriod
+      }
+    }).then(
+      function(response){
+        controller.getPost()
+      },
+      function(error){
+        console.log(error);
+      }
+    )
+    this.toggleEdit = null
+  }
 
 //delete
 this.deletePost = function(story){

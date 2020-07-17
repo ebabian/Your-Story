@@ -11,6 +11,20 @@
   <body ng-controller="PostController as ctrl">
   <div class="story-container">
     <h1 class="fade-in">{{ctrl.title}}</h1>
+
+    <button ng-click="ctrl.toggleCreate = $index" ng-if="$index !== ctrl.toggleCreate" >New Story</button>
+
+    <div class="create-form">
+      <form ng-submit="ctrl.createPost()" ng-if="$index === ctrl.toggleCreate">
+        <input type="text" placeholder="name" ng-model="ctrl.name">
+        <input type="text" placeholder="image" ng-model="ctrl.image">
+        <input type="text" placeholder="audio" ng-model="ctrl.audio">
+        <input type="text" placeholder="time period" ng-model="ctrl.timePeriod">
+        <input type="submit" value="Post">
+        <button ng-click="ctrl.toggleCreate = !$index">Cancel</button>
+      </form>
+    </div>
+
     <ul ng-repeat="story in ctrl.post">
       <li>
 

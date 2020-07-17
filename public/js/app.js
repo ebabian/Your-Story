@@ -13,10 +13,36 @@ app.controller('PostController', ['$http', function($http) {
   this.updateAudio = ''
   this.updateTimePeriod = ''
   this.toggleEdit = null
+  this.toggleCreate = null
 
 //replace this w controller
   const controller = this;
 
+
+  //create
+  this.createPost = function() {
+    $http({
+      method: 'POST',
+      url: '/routes',
+      data:
+      {
+        name: this.name,
+        image: this.image,
+        audio: this.audio,
+        timePeriod: this.updateTimePeriod
+      }
+    }).then(
+      function(response){
+        controller.getPost()
+      },
+      function(error){
+        console.log(error);
+      })
+      this.name = ''
+      this.image = ''
+      this.audio = ''
+      this.timePeriod = ''
+  }
 
   //edit
   this.editPost = function(story) {

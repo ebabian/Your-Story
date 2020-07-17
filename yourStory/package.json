@@ -1,29 +1,30 @@
 {
   "name": "yourstory",
   "engines": {
-    "node": "14.0.0"
+    "none": "14.0.0"
   },
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.9.24"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ebabian/final-project"
+    "url": "git+https://github.com/ebabian/final-project.git"
   },
-  "author": "Elektra Babian",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ebabian/final-project/issues"
   },
-  "homepage": "https://github.com/ebabian/final-project#readme",
-  "dependencies": {
-    "bcrypt": "^5.0.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-session": "^1.17.1",
-    "mongoose": "^5.9.24"
-  }
+  "homepage": "https://github.com/ebabian/final-project#readme"
+}

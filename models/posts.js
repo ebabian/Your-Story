@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const storySchema = new mongoose.Schema({
-    name:String,
+    name: String,
     image: String,
     audio: String,
     timePeriod: String,

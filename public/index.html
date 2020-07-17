@@ -12,23 +12,30 @@
   <div class="story-container">
     <h1 class="fade-in">{{ctrl.title}}</h1>
 
-    <button ng-click="ctrl.toggleCreate = $index" ng-if="$index !== ctrl.toggleCreate" >New Story</button>
+    <label for="Search by">
+      <input type="text" placeholder="Search a Story's Year" ng-model="searchBox">
+    </label>
+
+    <button  ng-click="ctrl.toggleCreate = $index" ng-if="$index !== ctrl.toggleCreate">New Story</button>
 
     <div class="create-form">
       <form ng-submit="ctrl.createPost()" ng-if="$index === ctrl.toggleCreate">
         <input type="text" placeholder="name" ng-model="ctrl.name">
         <input type="text" placeholder="image" ng-model="ctrl.image">
-        <input type="text" placeholder="audio" ng-model="ctrl.audio">
         <input type="text" placeholder="time period" ng-model="ctrl.timePeriod">
+        <input type="file" placeholder="audio" name="myAudio" ng-disabled="uploading" ng-model="ctrl.audio"
+        style="display: none;">
         <input type="submit" value="Post">
         <button ng-click="ctrl.toggleCreate = !$index">Cancel</button>
       </form>
     </div>
 
-    <ul ng-repeat="story in ctrl.post">
+    <ul ng-repeat="story in ctrl.post | filter: searchBox">
       <li>
 
         <img class="scale-up-center" id="story-img" src={{story.image}} alt="">
+
+        <p>{{story.timePeriod}}</p>
 
         <p>Listen to <em>{{story.name}}'s</em> story</p>
 
@@ -49,7 +56,7 @@
         <div ng-if="$index === ctrl.toggleEdit">
           <input type="text" ng-model="ctrl.updateName" placeholder="{{story.name}}">
           <input type="text" ng-model="ctrl.updateImage" placeholder="{{story.image}}">
-          <input type="text" ng-model="ctrl.updateAudio" placeholder="{{story.audio}}">
+          <input type="file" ng-model="ctrl.updateAudio" placeholder="{{story.audio}}">
           <input type="submit" value="update">
           <button
           ng-click="ctrl.toggleEdit = !$index"

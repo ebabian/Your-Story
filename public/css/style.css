@@ -11,7 +11,7 @@ body {
   filter: grayscale(0);
 }
 
-form input{
+form input, label input{
   color: white;
 }
 

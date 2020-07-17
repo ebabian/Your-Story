@@ -2,11 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const session = require('express-session');
+const fileUpload = require('express-fileupload')
+const fs = require('fs')
 
 
 app.use(express.json());
 app.use(express.static('public'));
-
+app.use(fileUpload())
 
 const db = mongoose.connection
 require('dotenv').config()
@@ -18,7 +20,7 @@ const MONGODB_URI = process.env.MONGODB_URI
 const routesController = require('./controllers/routes.js');
 app.use('/routes', routesController);
 
-//connect mongoose 
+//connect mongoose
 mongoose.connect(
     MONGODB_URI,
     {

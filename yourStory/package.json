@@ -1,5 +1,8 @@
 {
   "name": "yourstory",
+  "engines": {
+    "node": "14.0.0"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Elektra Babian",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",
@@ -16,4 +19,3 @@
     "express-session": "^1.17.1",
     "mongoose": "^5.9.24"
   }
-}

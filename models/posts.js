@@ -2,8 +2,9 @@ const mongoose = require('mongoose');
 
 const storySchema = new mongoose.Schema({
     name: String,
+    location: String,
     image: String,
-    audio: String,
+    text: String,
     timePeriod: String,
 });
 

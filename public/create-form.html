@@ -1,0 +1,9 @@
+<form ng-submit="ctrl.createPost()" ng-if="$index === ctrl.toggleCreate">
+  <input type="text" placeholder="name" ng-model="ctrl.name">
+  <input type="text" placeholder="location" ng-model="ctrl.location">
+  <input type="text" placeholder="image" ng-model="ctrl.image">
+  <input type="text" placeholder="text" ng-model="ctrl.text">
+  <input type="text" placeholder="time period" ng-model="ctrl.timePeriod">
+  <input type="submit" value="Post">
+  <button ng-click="ctrl.toggleCreate = !$index">Cancel</button>
+</form>

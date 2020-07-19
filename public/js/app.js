@@ -5,19 +5,20 @@ const app = angular.module("StoryApp", []);
 app.controller('PostController', ['$http', function($http) {
   this.title = "Your Story"
   this.name = '';
+  this.location = '';
   this.image = '';
-  this.audio = '';
+  this.text = '';
   this.timePeriod = '';
   this.updateName = ''
+  this.updateLocation = ''
   this.updateImage = ''
-  this.updateAudio = ''
+  this.updateText = ''
   this.updateTimePeriod = ''
   this.toggleEdit = null
   this.toggleCreate = null
 
 //replace this w controller
   const controller = this;
-
 
   //create
   this.createPost = function() {
@@ -27,9 +28,10 @@ app.controller('PostController', ['$http', function($http) {
       data:
       {
         name: this.name,
+        location: this.location,
         image: this.image,
-        audio: this.audio,
-        timePeriod: this.updateTimePeriod
+        text: this.text,
+        timePeriod: this.timePeriod
       }
     }).then(
       function(response){
@@ -39,8 +41,9 @@ app.controller('PostController', ['$http', function($http) {
         console.log(error);
       })
       this.name = ''
+      this.location = ''
       this.image = ''
-      this.audio = ''
+      this.text = ''
       this.timePeriod = ''
   }
 
@@ -52,8 +55,9 @@ app.controller('PostController', ['$http', function($http) {
       data:
       {
         name: this.updateName,
+        location: this.updateLocation,
         image: this.updateImage,
-        audio: this.updateAudio,
+        text: this.updateText,
         timePeriod: this.updateTimePeriod
       }
     }).then(

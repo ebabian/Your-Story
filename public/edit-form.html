@@ -1,0 +1,19 @@
+<!-- edit button -->
+<button
+  ng-if="$index !== ctrl.toggleEdit"
+  ng-click="ctrl.toggleEdit = $index"
+  type="button"
+  name="button">edit</button>
+
+<!-- edit form -->
+<form ng-submit="ctrl.editPost(story)">
+<div ng-if="$index === ctrl.toggleEdit">
+  <input type="text" ng-model="ctrl.updateName" placeholder="{{story.name}}">
+  <input type="text" ng-model="ctrl.updateImage" placeholder="{{story.image}}">
+  <input type="text" ng-model="ctrl.updateAudio" placeholder="{{story.audio}}">
+  <input type="submit" value="update">
+  <button
+  ng-click="ctrl.toggleEdit = !$index"
+  type="button" name="button">Cancel</button>
+</div>
+</form>

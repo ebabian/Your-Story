@@ -2,13 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const session = require('express-session');
-const fileUpload = require('express-fileupload')
-const fs = require('fs')
 
 
 app.use(express.json());
 app.use(express.static('public'));
-app.use(fileUpload())
+// app.use(fileUpload())
 
 const db = mongoose.connection
 require('dotenv').config()

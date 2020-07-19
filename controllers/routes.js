@@ -1,10 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const Story = require('../models/posts.js')
-const fileUpload = require('express-fileupload')
-const fs = require('fs')
-
-router.use(fileUpload())
 
 //post
 router.post('/', (req, res) => {

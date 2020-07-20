@@ -43,8 +43,11 @@
         <ul ng-repeat="story in ctrl.post | filter: searchBox">
           <li class="card-container">
             <div
-            ng-click="isFlipped=!isFlipped"
             class="blog-post">
+
+            <button
+            id="flip-btn"
+            ng-click="isFlipped = !isFlipped">Read</button>
 
               <div
               ng-class="{'flipped':isFlipped}"
@@ -73,7 +76,7 @@
                   <p class="orange-read">Read</p>
                   <button class="read-more-btn"></button>
                   <p
-                  class="btn-p">Read</p>
+                  class="btn-p" style="display: none;">Read</p>
                   </div>
 
 
@@ -82,7 +85,9 @@
                   class="flip-card-back">
                     <p>{{story.text}}</p>
 
-                    <button>Close</button>
+                    <button
+                    ng-click="isFlipped = !isFlipped"
+                    >Close</button>
 
                   </div>
 

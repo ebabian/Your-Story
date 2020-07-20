@@ -17,11 +17,12 @@ app.controller('PostController', ['$http', function($http) {
   this.toggleEdit = null
   this.toggleCreate = null
   // this.toggleCard = null
-  this.isFlipped = true;
+  this.isFlipped = null;
 
 //replace this w controller
   const controller = this;
 
+  
 
 
   //create

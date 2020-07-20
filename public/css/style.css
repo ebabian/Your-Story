@@ -235,6 +235,7 @@ h1{
   width: 95%;
 }
 
+
 /* flip card */
 
 .card-container{
@@ -277,7 +278,8 @@ background-color: transparent;
   transition:transform 1s ease-in-out;
   top: 1px;
   margin: 0;
-  background-color: #fff;
+  background-color: rgba(255, 255, 200, 0.9);
+  /* background-color: rgba(255, 255, 100, 0.9); */
   overflow-x: scroll;
 }
 
@@ -286,6 +288,8 @@ background-color: transparent;
   top: 10px;
   width: 90%;
   display: block;
+  padding-left: 30px;
+  padding-top: 20px;
 }
 
 #flip-btn {

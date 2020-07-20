@@ -303,7 +303,7 @@ background-color: transparent;
   cursor: pointer;
 }
 
-#flip-btn:hover {
+.card-container:hover #flip-btn{
   color: #fff;
 }
 

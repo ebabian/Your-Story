@@ -45,13 +45,14 @@
             <div
             class="blog-post">
 
-            <button
-            id="flip-btn"
-            ng-click="isFlipped = !isFlipped">Read</button>
-
               <div
               ng-class="{'flipped':isFlipped}"
               class="flip-card-front">
+
+              <button
+              id="flip-btn"
+              ng-click="isFlipped = !isFlipped">Read</button>
+
                 <h4 id="blog-h4"> <em>{{story.name}}'s</em> story</h4>
 
                 <p id="time-period">{{story.timePeriod}}</p>

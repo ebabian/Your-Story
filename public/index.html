@@ -43,44 +43,41 @@
         <ul ng-repeat="story in ctrl.post | filter: searchBox">
           <li class="card-container">
             <div class="blog-post">
-            <h4 id="blog-h4"> <em>{{story.name}}'s</em> story</h4>
+              <div class="flip-card-front">
+                <h4 id="blog-h4"> <em>{{story.name}}'s</em> story</h4>
 
+                <p id="time-period">{{story.timePeriod}}</p>
 
-            <p id="time-period">{{story.timePeriod}}</p>
+                <img class="scale-up-center story-img" src={{story.image}}><br/>
 
-            <!-- <p>{{story.text}}</p> -->
-            <!-- <i class="fas fa-arrow-right"></i> -->
-            <img class="scale-up-center story-img" src={{story.image}}><br/>
-            <div class="btns">
+                <div class="btns">
+                  <button
+                  id="del-btn"
+                  ng-click="ctrl.deletePost(story)">delete</button>
 
-              <button
-              id="del-btn"
-              ng-click="ctrl.deletePost(story)">delete</button>
-
-              <button
-                id="edit-btn"
-                ng-if="$index !== ctrl.toggleEdit"
-                ng-click="ctrl.toggleEdit = $index"
-                >edit</button>
-                <div
-                class="edit-form-section" ng-include="'edit-form.html'">
+                  <button
+                    id="edit-btn"
+                    ng-if="$index !== ctrl.toggleEdit"
+                    ng-click="ctrl.toggleEdit = $index"
+                    >edit</button>
+                    <div
+                    class="edit-form-section" ng-include="'edit-form.html'">
+                    </div>
                 </div>
-            </div>
 
-              <p class="orange-read">Read</p>
-              <button class="read-more-btn"></button>
-              <!-- <p class="btn-p">Read</p> -->
-              <p class="btn-p">Read</p>
+                  <p class="orange-read">Read</p>
+                  <button class="read-more-btn"></button>
+                  <!-- <p class="btn-p">Read</p> -->
+                  <p class="btn-p">Read</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>{{story.text}}</p>
 
-              <div class="text-modal">
-                <p>{{story.text}}</p>
+                    <button>Close</button>
 
-                <button>Close</button>
-
-              </div>
-
-            </div>
-          </li>
+                  </div>
+                </div>
+              </li>
         </ul>
       <!-- </div> -->
     </div>

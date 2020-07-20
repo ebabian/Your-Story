@@ -35,7 +35,7 @@ margin-left: 50px;
 .card-container {
   position: relative;
   width: 400px;
-  height: 400px;
+  height: 385px;
   /* border: 1px solid #fff; */
   overflow: hidden;
   background-color: #fff;
@@ -193,28 +193,41 @@ h1{
 
 #new-story-btn {
   border: 0;
-  /* color: white; */
   width: 100px;
   height: 25px;
   border-radius: 1px;
+  background-color: #282828;
+  color: #ccc;
   cursor: pointer;
   float: right;
   position: absolute;
   top: 75px;
   right: 50px;
 }
+#new-story-btn:hover {
+  background-color: #383838;
+  color: #fff;
+}
+
 
 
 #create-submit-btn, #create-cancel-btn {
   border: 0;
-  background-color: white;
-  color: black;
+  background-color: #282828;
+  color: #ccc;
   width: 100px;
   height: 25px;
   border-radius: 1px;
   cursor: pointer;
 }
-
+#create-submit-btn:hover {
+  background-color: #383838;
+  color: #fff;
+}
+#create-cancel-btn:hover {
+  background-color: #383838;
+  color: #fff;
+}
 .story-form, .search-bar{
   width: 95%;
 }

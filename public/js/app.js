@@ -20,6 +20,20 @@ app.controller('PostController', ['$http', function($http) {
 //replace this w controller
   const controller = this;
 
+  // this.openModal = function () {
+  //   $http({
+  //     method:'POST',
+  //     url:'/routes',
+  //     message: this.text,
+  //   }).then(
+  //     function(response){
+  //     controller.getPost()
+  //   },
+  //     function(error) {
+  //       console.log(error);
+  //   })
+  // }
+
   //create
   this.createPost = function() {
     $http({

@@ -1,12 +1,11 @@
 
 <!-- edit form -->
-<form ng-submit="ctrl.editPost(story)">
+<form class="edit-form" ng-submit="ctrl.editPost(story)">
 <div ng-if="$index === ctrl.toggleEdit">
-  <input type="text" ng-model="ctrl.updateName" placeholder="{{story.name}}">
-  <input type="text" ng-model="ctrl.updateImage" placeholder="{{story.image}}">
-  <input type="text" ng-model="ctrl.updateAudio" placeholder="{{story.audio}}">
-  <input type="submit" value="update">
+  <input type="text" ng-model="ctrl.updateText" placeholder="{{story.text}}">
+  <input id="update-btn" type="submit" value="Update">
   <button
+  id="cancel-btn"
   ng-click="ctrl.toggleEdit = !$index"
   type="button" name="button">Cancel</button>
 </div>

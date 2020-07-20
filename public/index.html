@@ -42,8 +42,13 @@
       <!-- <div class="card-container"> -->
         <ul ng-repeat="story in ctrl.post | filter: searchBox">
           <li class="card-container">
-            <div class="blog-post">
-              <div class="flip-card-front">
+            <div
+            ng-click="isFlipped=!isFlipped"
+            class="blog-post">
+
+              <div
+              ng-class="{'flipped':isFlipped}"
+              class="flip-card-front">
                 <h4 id="blog-h4"> <em>{{story.name}}'s</em> story</h4>
 
                 <p id="time-period">{{story.timePeriod}}</p>
@@ -67,15 +72,20 @@
 
                   <p class="orange-read">Read</p>
                   <button class="read-more-btn"></button>
-                  <!-- <p class="btn-p">Read</p> -->
-                  <p class="btn-p">Read</p>
+                  <p
+                  class="btn-p">Read</p>
                   </div>
-                  <div class="flip-card-back">
+
+
+                  <div
+                  ng-class="{'flipped':!isFlipped}"
+                  class="flip-card-back">
                     <p>{{story.text}}</p>
 
                     <button>Close</button>
 
                   </div>
+
                 </div>
               </li>
         </ul>

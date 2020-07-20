@@ -242,12 +242,9 @@ backface-visibility: hidden;
 background-color: transparent;
 }
 
-/* .blog-post:hover {
+.blog-post .flipped {
   transform: rotateY(-180deg);
 
-} */
-.card-container:hover .blog-post {
-  transform: translateX(-100%) rotateY(-180deg);
 }
 
 .blog-post {
@@ -257,7 +254,6 @@ background-color: transparent;
   transform-style: preserve-3d;
   transform-origin: center right;
   transition: transform 1s;
-  transform-style: preserve-3d;
 }
 
 .flip-card-front, .flip-card-back {
@@ -271,22 +267,21 @@ background-color: transparent;
 }
 
 .flip-card-front {
+  transition:transform 1s ease-in-out;
   background-color: #fff;
   z-index: 2;
 }
 
 
 .flip-card-back {
+  transition:transform 1s ease-in-out;
   top: 1px;
   margin: 0;
-  background-color: red;
-  transform: rotateY(180deg);
+  background-color: #fff;
 }
 
 .flip-card-back p{
-  z-index: 2;
   color: black;
-  position: absolute;
   top: 10px;
   width: 90%;
   display: block;

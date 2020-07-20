@@ -17,7 +17,8 @@
   <div class="story-container">
     <!-- Your Story Title -->
     <h1 class="fade-in">{{ctrl.title}}</h1>
-
+    <!-- New Story Button -->
+    <button id="new-story-btn"  ng-click="ctrl.toggleCreate = $index" ng-if="$index !== ctrl.toggleCreate">New Story</button>
 
 
     <!-- Search Bar -->
@@ -27,11 +28,6 @@
         <input type="text" placeholder="Search a Story's Year" ng-model="searchBox">
       </label>
     </div>
-
-
-
-    <!-- New Story Button -->
-    <button id="new-story-btn"  ng-click="ctrl.toggleCreate = $index" ng-if="$index !== ctrl.toggleCreate">New Story</button>
 
     <!-- Create Form -->
     <div class="create-form" ng-include="'create-form.html'">

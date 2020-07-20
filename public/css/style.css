@@ -278,6 +278,7 @@ background-color: transparent;
   top: 1px;
   margin: 0;
   background-color: #fff;
+  overflow-x: scroll;
 }
 
 .flip-card-back p{
@@ -306,6 +307,18 @@ background-color: transparent;
 .card-container:hover #flip-btn{
   color: #fff;
 }
+
+#back-close-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: rgba(0,0,0,.6);
+  border: 0;
+  color: white;
+  width: 100px;
+  cursor: pointer;
+}
+
 
 
 /* ----------------------------------------------

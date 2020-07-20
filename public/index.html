@@ -80,13 +80,13 @@
                   class="btn-p" style="display: none;">Read</p>
                   </div>
 
-
                   <div
                   ng-class="{'flipped':!isFlipped}"
                   class="flip-card-back">
                     <p>{{story.text}}</p>
 
                     <button
+                    id="back-close-btn"
                     ng-click="isFlipped = !isFlipped"
                     >Close</button>
 
@@ -94,10 +94,8 @@
 
                 </div>
               </li>
-        </ul>
-      <!-- </div> -->
-    </div>
-
-  </div>
+            </ul>
+          </div>
+        </div>
   </body>
 </html>

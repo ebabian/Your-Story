@@ -22,7 +22,7 @@ app.controller('PostController', ['$http', function($http) {
 //replace this w controller
   const controller = this;
 
-  
+
 
 
   //create
@@ -59,11 +59,7 @@ app.controller('PostController', ['$http', function($http) {
       url: '/routes/' + story._id,
       data:
       {
-        name: this.updateName,
-        location: this.updateLocation,
-        image: this.updateImage,
         text: this.updateText,
-        timePeriod: this.updateTimePeriod
       }
     }).then(
       function(response){

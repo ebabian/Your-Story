@@ -15,10 +15,15 @@
     <!-- Your Story Title -->
     <h1 class="fade-in">{{ctrl.title}}</h1>
 
+
+
     <!-- Search Bar -->
     <label for="Search by">
       <input type="text" placeholder="Search a Story's Year" ng-model="searchBox">
     </label>
+
+
+
 
     <!-- New Story Button -->
     <button  ng-click="ctrl.toggleCreate = $index" ng-if="$index !== ctrl.toggleCreate">New Story</button>
@@ -27,32 +32,52 @@
     <div class="create-form" ng-include="'create-form.html'">
     </div>
 
+
+
+
+
     <!-- Blog Post li -->
-    <div>
-    <ul ng-repeat="story in ctrl.post | filter: searchBox">
-      <li>
-        {{story.location}}
+    <div class="cards-container">
+      <!-- <div class="card-container"> -->
+        <ul ng-repeat="story in ctrl.post | filter: searchBox">
+          <li class="card-container">
+            <div class="blog-post">
+            <h4 id="blog-h4"> <em>{{story.name}}'s</em> story</h4>
 
-        <!-- blog post image -->
-        <img class="scale-up-center" id="story-img" src={{story.image}} alt="">
 
-        <!-- time period -->
-        <p>{{story.timePeriod}}</p>
+            <p id="time-period">{{story.timePeriod}}  {{story.location}}</p>
 
-        <!-- post title -->
-        <h4 id="blog-h4">Read <em>{{story.name}}'s</em> story</h4>
+            <!-- <p>{{story.text}}</p> -->
+            <!-- <i class="fas fa-arrow-right"></i> -->
+            <img class="scale-up-center story-img" src={{story.image}}><br/>
+            <div class="btns">
+              <button ng-click="ctrl.deletePost(story)">delete</button>
 
-        <!-- post text 'story' -->
-        <p>{{story.text}}</p>
+              <button
+                ng-if="$index !== ctrl.toggleEdit"
+                ng-click="ctrl.toggleEdit = $index"
+                >edit</button>
 
-        <!-- delete button -->
-        <button ng-click="ctrl.deletePost(story)" type="button" name="button">delete</button>
+              <div class="edit-form-section" ng-include="'edit-form.html'">
+              </div>
+            </div>
+              <p class="orange-read">Read</p>
+              <button class="read-more-btn"></button>
+              <!-- <p class="btn-p">Read</p> -->
+              <a class="modal-trigger" href="#modal1"><p class="btn-p">Read</p></a>
+              <div class="text-modal modal" ng-include="'text-modal.html'">
+              </div>
 
-        <div class="edit-form-section" ng-include="'edit-form.html'">
-        </div>
-      </li>
+            <!-- modal -->
 
-    </ul>
+
+
+            </div>
+          </li>
+        </ul>
+      <!-- </div> -->
+    </div>
+
   </div>
   </body>
 </html>

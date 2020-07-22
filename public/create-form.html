@@ -2,7 +2,7 @@
 class="story-form"
  ng-submit="ctrl.createPost()" ng-if="$index === ctrl.toggleCreate" required>
   <input type="text" placeholder="name" ng-model="ctrl.name" required>
-  <input type="text" placeholder="mm/yy, city, state" ng-model="ctrl.timePeriod">
+  <input type="text" placeholder="year   city, state" ng-model="ctrl.timePeriod">
   <input type="text" placeholder="image" ng-model="ctrl.image" required>
   <input type="text" placeholder="text" ng-model="ctrl.text" required>
 

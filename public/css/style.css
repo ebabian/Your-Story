@@ -19,6 +19,7 @@ audio::-webkit-media-controls-play-button {
 
 .story-container {
 margin-left: 50px;
+margin-bottom: 100px;
 }
 
 /* card container */
@@ -60,9 +61,10 @@ ul {
 #time-period {
   position: absolute;
   z-index: 100;
-  top: 15px;
-  left: 300px;
+  top: 25px;
+  left: 305px;
   writing-mode: vertical-lr;
+  font-family: arial;
 }
 
 .story-img {

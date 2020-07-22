@@ -37,7 +37,7 @@ margin-bottom: 100px;
 .card-container {
   position: relative;
   width: 400px;
-  height: 385px;
+  height: 381px;
   /* border: 1px solid #fff; */
   overflow: hidden;
   background-color: #fff;
@@ -280,18 +280,30 @@ background-color: transparent;
   transition:transform 1s ease-in-out;
   top: 1px;
   margin: 0;
+  text-align: center;
   background-color: rgba(255, 255, 200, 1);
   /* background-color: rgba(255, 255, 100, 0.9); */
   overflow-x: scroll;
 }
 
+.flex-img img{
+  float: left;
+  margin: 10px;
+  padding-top: 5px;
+  padding-left: 5px;
+  width: 130px;
+}
+
 .flip-card-back p{
   color: black;
   top: 10px;
-  width: 90%;
+  width: 95%;
   display: block;
   padding-left: 30px;
-  padding-top: 20px;
+  padding-top: 5px;
+  /* clear: both; */
+  text-align: left;
+  margin-top: -15px;
 }
 
 #flip-btn {

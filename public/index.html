@@ -76,8 +76,12 @@
                   <div
                   ng-class="{'flipped':!isFlipped}"
                   class="flip-card-back">
-                    <p>{{story.text}}</p>
 
+                    <div class="flex-img">
+                      <img class="back-img" src={{story.image}}><br/>
+                    </div>
+
+                    <p class="back-text">{{story.text}}</p>
                     <button
                     id="back-close-btn"
                     ng-click="isFlipped = !isFlipped"

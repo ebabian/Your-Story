@@ -20,7 +20,6 @@
     <!-- New Story Button -->
     <button id="new-story-btn"  ng-click="ctrl.toggleCreate = $index" ng-if="$index !== ctrl.toggleCreate">New Story</button>
 
-
     <!-- Search Bar -->
     <div class="search-bar">
       <label
@@ -28,7 +27,7 @@
         <input type="text" placeholder="Find a Story" ng-model="searchBox">
       </label>
     </div>
-  
+
 
     <!-- Create Form -->
     <div class="create-form" ng-include="'create-form.html'">

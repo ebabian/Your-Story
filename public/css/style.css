@@ -173,8 +173,8 @@ position: absolute;
 .edit-form{
   /* background-color: rgba(0,0,0,.8); */
   width: 200px;
-  height: 200px;
-  margin-top: -300px;
+  height: 100px;
+  margin-top: -200px;
   color: black;
 }
 
@@ -278,7 +278,7 @@ background-color: transparent;
   transition:transform 1s ease-in-out;
   top: 1px;
   margin: 0;
-  background-color: rgba(255, 255, 200, 0.9);
+  background-color: rgba(255, 255, 200, 1);
   /* background-color: rgba(255, 255, 100, 0.9); */
   overflow-x: scroll;
 }
